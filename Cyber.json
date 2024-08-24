@@ -6,7 +6,7 @@
   "language": "en",
   "notification": true,
   "approval": false,
-  "BOTNAME": "LOLI POP",
+  "BOTNAME": "S M HRIDOY BOT",
   "PREFIX": "/",
   "OPERATOR": [
     "513453703",
@@ -18,7 +18,7 @@
     "",
     "513453703"
   ],
-  "OWNER": ["100029115600589"], 
+  "OWNER": ["513453703"], 
   "APPROVED": [],
   "disabledcmds": [
   ],
