@@ -24,32 +24,26 @@ const time = process.uptime(),
     seconds = Math.floor(time % 60);
 const moment = require("moment-timezone");
 var juswa = moment.tz("Asia/Manila").format("『D/MM/YYYY』 【hh:mm:ss】");
-var link = ["https://i.imgur.com/jfVTL4T.jpeg", 
+var link = ["https://i.imgur.com/NoGWeZw.jpeg",
 
-            "https://i.imgur.com/jfVTL4T.jpeg", 
+            "https://i.imgur.com/NoGWeZw.jpeg",
 
-            "https://i.imgur.com/jfVTL4T.jpeg",
+            "https://i.imgur.com/NoGWeZw.jpeg",
 
-            "https://i.imgur.com/jfVTL4T.jpeg"];
+            "https://i.imgur.com/12Zuk1o.jpeg"];
 
 var callback = () => api.sendMessage({body:`•—»✨𝐀𝐝𝐦𝐢𝐧 𝐈𝐧𝐟𝐨𝐫𝐦𝐚𝐭𝐢𝐨𝐧✨🌺
  •┄┅════❁🌺❁════┅┄•
 
-𝐁𝐨𝐭 𝐍𝐚𝐦𝐞 : 𝐈𝐬𝐥𝐚𝐦𝐢𝐜𝐤 𝐂𝐲𝐛𝐞𝐫 𝐂𝐡𝐚𝐭
+𝐁𝐨𝐭 𝐍𝐚𝐦𝐞 : 𝐇𝐑𝐈𝐃𝐎𝐘 𝐁𝐎𝐓
 
-𝐁𝐨𝐭 𝐀𝐝𝐦𝐢𝐧 : 𝟕 𝐀d𝐦𝐢𝐧 𝐜𝐨𝐧𝐭𝐫𝐨𝐥 𝐓𝐡𝐢𝐬 𝐑𝐨𝐛𝐨𝐭
+𝐁𝐨𝐭 𝐀𝐝𝐦𝐢𝐧 : 𝐒.𝐌 𝐇𝐫𝐢𝐝𝐨𝐲 𝐀𝐫𝐢𝐲𝐚𝐧
 
 •┄┅══❁CONCATET❁══┅┄• 
 
-𝐅𝐚𝐜𝐞𝐛𝐨𝐨𝐤 𝐏𝐚𝐠𝐞 : https://www.facebook.com/profile.php?id=100081939442749
+𝐅𝐚𝐜𝐞𝐛𝐨𝐨𝐤 : https://www.facebook.com/Hridoy.tera.bap.agaya
 
-𝐖𝐏  : wa.me/+8801859561262
-𝐖𝐏 : wa.me/+880 1309-991724
-𝐖𝐏 : wa.me/+880 1905-600093
-𝐖𝐏 : wa.me/+880 1771-717162
-𝐖𝐏 : wa.me/+880 1885-115218
-𝐖𝐏 : wa.me/+880 1763-899929
-𝐖𝐏 : wa.me/+880 1814-587247
+𝐖𝐏  : wa.me/+8801719401981
 
 •┄┅═══❁🌺❁═══┅┄•\n🌺✨𝐎𝐭𝐡𝐞𝐫𝐬 𝐈𝐧𝐟𝐨𝐫𝐦𝐚𝐭𝐢𝐨𝐧✨🌺\n •┄┅═══❁🌺❁═══┅┄•
 
