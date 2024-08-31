@@ -1,12 +1,12 @@
 module.exports.config = {
-  name: "baby",
+  name: "1",
   version: "0.0.2",
   permission: 0,
   prefix: false,
   credits: "Islamick Cyber Chat",
   description: "fun",
   category: "admin",
-  usages: "",
+  usages: "awto",
   cooldowns: 5,
 };
 
