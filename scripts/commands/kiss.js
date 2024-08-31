@@ -6,7 +6,7 @@ module.exports.config = {
   credits: "Clarence DK",
   description: "Get fuck",
   category: "img",
-  usages: "[@mention]",
+  usages: "[tag]",
   cooldowns: 5,
   dependencies: {
       "axios": "",
