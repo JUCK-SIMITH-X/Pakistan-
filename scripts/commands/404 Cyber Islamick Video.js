@@ -3,7 +3,7 @@ module.exports.config = {
   name: "islamick video",
   version: "1.0.0",
   permssion: 0,
-  credits: "Islamick Cyber Chat",
+  credits: "SM HRIDOY",
   prefix:true,
   description: "islamick  VEDIO",
   category: "I C C",
