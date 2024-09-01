@@ -7,7 +7,7 @@ module.exports.config = {
     name: "kiss2",
     version: "2.0.0",
     permission: 0,
-    credits: "nazrul",
+    credits: "SM Hridoy",
     prefix: true,
     description: "",
     category: "Love",
