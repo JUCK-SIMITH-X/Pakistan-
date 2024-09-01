@@ -29,8 +29,8 @@ module.exports.handleEvent = async ({ api, event, Threads }) => {
     const body = content.toLowerCase();
   if (body.startsWith("🇧🇩")) {
     const rahad = [
-      "•┄┅════❁🌺❁════┅┄•\n★\n\n - সবুজের বুকে লাল সে তো !!🖤🥀\n\n - সবুজের বুকে লাল সে তো -!!🌺✨\n\n ★\n•┄┅════❁🌺❁════┅┄•",
-      "•┄┅════❁🌺❁════┅┄•\n \n★\n\n - উরবেই চিরকাল-!!🖤🥀\n\n - উরবেই চিরকাল -!!🌺✨\n\n ★\n•┄┅════❁🌺❁════┅┄•"
+      "•┄┅════❁🌺❁════┅┄•\n★\n\n - সবুজের বুকে লাল সে তো !!🖤🥀\n\n - উরবেই চিরকাল -!!🌺✨\n\n ★\n•┄┅════❁🌺❁════┅┄•",
+      "•┄┅════❁🌺❁════┅┄•\n \n★\n\n - সবুজের বুকে লাল সে তো-!!🖤🥀\n\n - উরবেই চিরকাল -!!🌺✨\n\n ★\n•┄┅════❁🌺❁════┅┄•"
 
     ];
     const rahad2 = rahad[Math.floor(Math.random() * rahad.length)];
