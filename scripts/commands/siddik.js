@@ -2,7 +2,7 @@ module.exports.config = {
   name: "bot",
   version: "1.0.0",
   hasPermssion: 0,
-  credits: "SIDDIK",
+  credits: "SM HRIDOY",
   description: "better than all Sim simi",
   usePrefix: true,
   prefix:"awto",
