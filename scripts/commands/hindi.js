@@ -2,7 +2,7 @@ module.exports.config = {
 	name: "hindi",
 	version: "1.0.1",
 	permission: 0,
-	credits: "nazrul",
+	credits: "SM HRIDOY",
   prefix: true,
 	description: "Text translation",
 	category: "media",
