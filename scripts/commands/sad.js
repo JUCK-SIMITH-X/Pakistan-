@@ -3,7 +3,7 @@ module.exports.config = {
   name: "sad",
   version: "1.0.0",
   permssion: 0,
-  credits: "Islamick Cyber Chat",
+  credits: "SM HRIDOY",
   prefix:true,
   description: "sad video",
   category: "user",
@@ -20,7 +20,9 @@ module.exports.run = async ({api,event,args,client,Users,Threads,__GLOBAL,Curren
 const axios = global.nodemodule["axios"];
 const request = global.nodemodule["request"];
 const fs = global.nodemodule["fs-extra"];
-   var hi = ["𝐓 𝐎𝐅 𝐒𝐓𝐎𝐑𝐘 𝐕𝐈𝐃𝐄𝐎"];
+   var hi = ["「 -- 💙•༎♡༎•💙──🦋ლ-ლ 𝘿𝙤𝙣,𝙩..𝙩𝙧𝙪𝙨𝙩 𝙢𝙚 𝙢𝙮 𝙨𝙢𝙞𝙡𝙚 
+অনেক কষ্ট নিয়েও হাসতে পারি..!!🙂💔🥀
+💙•༎ 「 -𝙲𝚁𝙴𝙰𝚃𝙴 𝚂.𝙼 𝙷𝚁𝙸𝙳𝙾𝚈-🔥 」」"];
   var know = hi[Math.floor(Math.random() * hi.length)];
   var link = [
 "https://i.imgur.com/CVMdz4a.mp4",
