@@ -15,10 +15,10 @@ module.exports.onLoad = function () {
   const { existsSync, mkdirSync } = global.nodemodule["fs-extra"];
   const { join } = global.nodemodule["path"];
 
-  const path = join(__dirname, "cache", "joinvideo");
+  const path = join(__dirname, "cache", "joinGif");
   if (existsSync(path)) mkdirSync(path, { recursive: true }); 
 
-  const path2 = join(__dirname, "cache", "joinvideo", "randomgif");
+  const path2 = join(__dirname, "cache", "joinGif", "");
   if (!existsSync(path2)) mkdirSync(path2, { recursive: true });
 
   return;
@@ -39,8 +39,8 @@ ________________________\n\n𝐓𝐨 𝐯𝐢𝐞𝐰 𝐚𝐧𝐲 𝐜𝐨𝐦�
 
 ${global.config.PREFIX}Help\n${global.config.PREFIX} Manu
 
-𝐁𝐎𝐓 𝐍𝐀𝐌𝐄 :𝐈𝐒𝐋𝐀𝐌𝐈𝐂𝐊 𝐂𝐇𝐀𝐓 𝐁𝐎𝐓
-\n\n⋆✦⋆⎯⎯⎯⎯⎯⎯⎯⎯⎯⋆✦⋆`, attachment: fs.createReadStream(__dirname + "/cache/king.mp4")} ,threadID));
+𝐁𝐎𝐓 𝐍𝐀𝐌𝐄 :SM HRIDOY BOT
+\n\n⋆✦⋆⎯⎯⎯⎯⎯⎯⎯⎯⎯⋆✦⋆`, attachment: fs.createReadStream(__dirname + "/cache/joinGif")} ,threadID));
   }
   else {
       try {
@@ -48,7 +48,7 @@ ${global.config.PREFIX}Help\n${global.config.PREFIX} Manu
           let { threadName, participantIDs } = await api.getThreadInfo(threadID);
 
           const threadData = global.data.threadData.get(parseInt(threadID)) || {};
-          const path = join(__dirname, "cache", "joinvideo");
+          const path = join(__dirname, "cache", "joinGif");
           const pathGif = join(path, `${threadID}.video`);
 
           var mentions = [], nameArray = [], memLength = [], i = 0;
