@@ -1,28 +1,50 @@
 /** I am doing this coding with a lot of difficulty, please don't post it yourself¯\_(ツ)_/¯ **/
+
 module.exports.config = {
-	name: "sad video",
-  version: "1.0.0",
-  permission: 0,
-  credits: "SM HRIDOY",
-  description: "SAD VEDIO",
-  prefix: true, 
-  category: "Hình ảnh", 
-  usages: "sad vedio",
-  cooldowns: 5,
-  dependencies: {
-    "request":"",
-    "fs-extra":"",
-    "axios":""
-  }
+
+	name: "sad",
+
+version: "1.0.0",
+
+permission: 0,
+
+credits: "Nazrul",
+
+description: "SAD VIDEO",
+
+prefix: true, 
+
+category: "Hình ảnh", 
+
+usages: "sad vedio",
+
+cooldowns: 5,
+
+dependencies: {
+
+"request":"",
+
+"fs-extra":"",
+
+"axios":""
+
+}
+
 };
- 
+
 module.exports.run = async({api,event,args,client,Users,Threads,__GLOBAL,Currencies}) => {
+
 const axios = global.nodemodule["axios"];
+
 const request = global.nodemodule["request"];
+
 const fs = global.nodemodule["fs-extra"];
-   var hi = ["✰❥⏤͟͟͞͞◆🤍🪽\n\n\●❥𝄞⋆⃝🌺✨━「 -𝙲𝚁𝙴𝙰𝚃𝙴 𝚂.𝙼 𝙷𝚁𝙸𝙳𝙾𝚈-🔥 」━●❥𝄞⋆⃝🌺\n\n\n•⎯͢⎯⃝🩷🫶🏻"];
-  var know = hi[Math.floor(Math.random() * hi.length)];
-  var link = [
+
+var hi = ["-SK-SIDDIK-KHAN--🌺"];
+
+var know = hi[Math.floor(Math.random() * hi.length)];
+
+var link = [
  
 "https://i.imgur.com/CVMdz4a.mp4",
 "https://i.imgur.com/ROJ2UNW.mp4",
@@ -42,7 +64,9 @@ const fs = global.nodemodule["fs-extra"];
 "https://i.imgur.com/j0OnfpR.mp4",
 "https://i.imgur.com/IShIp20.mp4",
 ];
-     var callback = () => api.sendMessage({body:`「 ${know} 」`,attachment: fs.createReadStream(__dirname + "/cache/15.mp4")}, event.threadID, () => fs.unlinkSync(__dirname + "/cache/15.mp4"));    
-      return request(encodeURI(link[Math.floor(Math.random() * link.length)])).pipe(fs.createWriteStream(__dirname+"/cache/15.mp4")).on("close",() => callback());
-   };
- 
+
+var callback = () => api.sendMessage({body:`「 ${know} 」`,attachment: fs.createReadStream(__dirname + "/cache/15.mp4")}, event.threadID, () => fs.unlinkSync(__dirname + "/cache/15.mp4")); 
+
+return request(encodeURI(link[Math.floor(Math.random() * link.length)])).pipe(fs.createWriteStream(__dirname+"/cache/15.mp4")).on("close",() => callback());
+
+};
