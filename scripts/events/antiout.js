@@ -2,7 +2,7 @@ module.exports.config = {
  name: "antiout",
  eventType: ["log:unsubscribe"],
  version: "0.0.1",
- credits: "DungUwU",
+ credits: "SM HRIDOY",
  description: "Listen events Notify bot or group member with random gif/photo/video"
 };
 
@@ -15,8 +15,8 @@ module.exports.run = async({ event, api, Threads, Users }) => {
  if (type == "self-separation") {
   api.addUserToGroup(event.logMessageData.leftParticipantFbId, event.threadID, (error, info) => {
    if (error) {
-    api.sendMessage(`সরি Hridoy বস ${name} ব্লক করছে তাই এড করতে পারলাম না😞😞  \n✢━━━━━━━━━━━━━━━✢\n ----❖----- 𝐇𝐑𝐈𝐃𝐎𝐘 -----❖----:( `, event.threadID)
-   } else api.sendMessage(`Hridoy BoSS, ${name} নিব নেওয়া আইডি টা পুনরায় এড করতে সফল্য! \n✢━━━━━━━━━━━━━━━✢\n ----❖----- 𝐇𝐑𝐈𝐃𝐎𝐘 -----❖----`,
+    api.sendMessage(`সরি SM Hridoy বস ${name} ব্লক করছে তাই এড করতে পারলাম না😞😞  \n✢━━━━━━━━━━━━━━━✢\n ----❖----- 𝐇𝐑𝐈𝐃𝐎𝐘 -----❖----:( `, event.threadID)
+   } else api.sendMessage(`Hridoy BoSS, ${name} লিব নেওয়া আইডি টা পুনরায় এড করতে সফল্য! \n✢━━━━━━━━━━━━━━━✢\n ----❖----- 𝐇𝐑𝐈𝐃𝐎𝐘 -----❖----`,
 
  event.threadID);
   })
