@@ -1,13 +1,13 @@
 /** I am doing this coding with a lot of difficulty, please don't post it yourself¯\_(ツ)_/¯ **/
 module.exports.config = {
-  name: "song",
+  name: "gan",
   version: "1.0.0",
   permssion: 0,
   credits: "SM HRIDOY",
   prefix:true,
-  description: "song video",
+  description: "gan video",
   category: "user",
-  usages: "song",
+  usages: "gan",
   cooldowns: 5,
   dependencies: {
     "request":"",
