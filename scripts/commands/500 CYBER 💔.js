@@ -8,14 +8,14 @@ const link = [
 ];
 
 module.exports.config = {
-  name: "💔",
+  name: "❣️",
   version: "1.0.0",
   permssion: 0,
   credits: "Islamick Cyber Chat",
   prefix:true,
-  description: "auto reply to 💔",
+  description: "auto reply to ❣️",
   category: "noprefix",
-  usages: "💔",
+  usages: "❣️",
   cooldowns: 5,
   dependencies: {
     "request":"",
@@ -27,7 +27,7 @@ module.exports.config = {
 module.exports.handleEvent = async ({ api, event, Threads }) => {
   const content = event.body ? event.body : '';
     const body = content.toLowerCase();
-  if (body.startsWith("💔")) {
+  if (body.startsWith("❣️")) {
     const rahad = [
       "•┄┅════❁🌺❁════┅┄•\n \n ~আমি যদি একবার ভেঙে পরি..!!💔\n\n•┄┅════❁🌺❁════┅┄•",
       "•┄┅════❁🌺❁════┅┄•\n\n~আমি যদি একবার ভেঙে পরি..!!💔\n\n•┄┅════❁🌺❁════┅┄•"
@@ -62,9 +62,9 @@ module.exports.languages = {
 module.exports.run = async ({ api, event, Threads, getText }) => {
   const { threadID, messageID } = event;
   let data = (await Threads.getData(threadID)).data;
-  if (typeof data["💔"] === "undefined" || data["💔"]) data["💔"] = false;
-  else data["💔"] = true;
+  if (typeof data["❣️"] === "undefined" || data["❣️"]) data["❣️"] = false;
+  else data["❣️"] = true;
   await Threads.setData(threadID, { data });
   global.data.threadData.set(threadID, data);
-  api.sendMessage(`${(data["💔"]) ? getText("off") : getText("on")} ${getText("successText")}`, threadID, messageID);
+  api.sendMessage(`${(data["❣️"]) ? getText("off") : getText("on")} ${getText("successText")}`, threadID, messageID);
 }; 
