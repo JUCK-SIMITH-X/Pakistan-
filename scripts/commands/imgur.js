@@ -1,4 +1,4 @@
-(module.exports.config = {
+module.exports.config = {
   name: "imgur",
   version: "6.9",
   credits: "dipto",
