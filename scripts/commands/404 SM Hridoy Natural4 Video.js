@@ -3,7 +3,7 @@ module.exports.config = {
   name: "natural4 video",
   version: "1.0.0",
   permssion: 0,
-  credits: "Islamick Cyber Chat",
+  credits: "SM Hridoy",
   prefix:true,
   description: "NATURAL4  VEDIO",
   category: "I C C",
