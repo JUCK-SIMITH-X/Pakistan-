@@ -19,7 +19,7 @@ handleEvent: function({ api, event, client, __GLOBAL }) {
   if (body.indexOf("oi")==0 || body.indexOf("oii")==0 || body.indexOf("🙋‍♀️")==0 || body.indexOf("🙋‍♂️")==0) {
     var msg = {
         body: "~ ডাকো কেনো গো, আমি আছি তো এখানে..!✋🥀",
-        attachment: fs.createReadStream(__dirname + `/S.MHridoy/dakoknogo.mp3`)
+        attachment: fs.createReadStream(__dirname + `/SM.Hridoy/dakoknogo.mp3`)
       }
       api.sendMessage( msg, threadID, messageID);
     api.setMessageReaction("😇", event.messageID, (err) => {}, true)
