@@ -2,7 +2,7 @@ module.exports.config = {
  name: "help",
  version: "2.0.0",
  permssion: 0,
- credits: "SM Hridoy",
+ credits: "Islamick Cyber Chat",
   prefix:true,
  description: "commands list",
  category: "system",
