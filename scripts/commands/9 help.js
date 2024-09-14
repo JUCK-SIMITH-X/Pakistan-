@@ -1,12 +1,12 @@
 module.exports.config = {
  name: "help",
  version: "2.0.0",
- permssion: auto reply,
+ permssion: 0,
  credits: "SM Hridoy",
   prefix:true,
  description: "commands list",
  category: "system",
- usages: "",
+ usages: "Shows Commands",
  cooldowns: 1,
  envConfig: {
   autoUnsend: false,
