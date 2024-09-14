@@ -1,12 +1,12 @@
 module.exports.config = {
-  name: "hack2",
+  name: "hack",
   version: "1.0.0",
   permssion: 0,
   premium: false,
   prefix: true,
   credits: "SM Hridoy",
-  description: "hack2",
-  category: "hack2",
+  description: "hack",
+  category: "hack",
   usages: "@mention",
   dependencies: {
         "axios": "",
@@ -98,7 +98,7 @@ module.exports.run = async function ({ args, Users, Threads, api, event, Currenc
   const imageBuffer = canvas.toBuffer();
   fs.writeFileSync(pathImg, imageBuffer);
   fs.removeSync(pathAvt1);
-  return api.sendMessage({ body: `╭──────•◈•──────╮\n         ༎「-𝙲𝚁𝙴𝙰𝚃𝙴 𝚂.𝙼 𝙷𝚁𝙸𝙳𝙾𝚈-      \nতোমার ফেসবুক আইডি'র হোগা মারা শেষ-🥵\nপাসওয়ার্ড দিয়ে দিলাম বস মাসুম'এর কাছে-🥱🏃‍♂️🌻\n╰──────•◈•──────╯`, attachment: fs.createReadStream(pathImg) },
+  return api.sendMessage({ body: `╭──────•◈•──────╮\n         ༎「-𝙲𝚁𝙴𝙰𝚃𝙴 𝚂.𝙼 𝙷𝚁𝙸𝙳𝙾𝚈-      \nতোমার ফেসবুক আইডি'র হোগা মারা শেষ-🥵\nপাসওয়ার্ড দিয়ে দিলাম বস ༎「-𝚂.𝙼 𝙷𝚁𝙸𝙳𝙾𝚈-'এর কাছে-🥱🏃‍♂️🌻\n╰──────•◈•──────╯`, attachment: fs.createReadStream(pathImg) },
       event.threadID,
       () => fs.unlinkSync(pathImg),
       event.messageID);
