@@ -2,11 +2,11 @@ module.exports.config = {
  name: "help",
  version: "2.0.0",
  permssion: 0,
- credits: "SM Hridoy",
+ credits: "Islamick Cyber Chat",
   prefix:true,
  description: "commands list",
  category: "system",
- usages: "",
+ usages: "module name",
  cooldowns: 1,
  envConfig: {
   autoUnsend: false,
