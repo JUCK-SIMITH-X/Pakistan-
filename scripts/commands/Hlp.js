@@ -1,5 +1,5 @@
 module.exports.config = {
- name: "help",
+ name: "hlp",
  version: "2.0.0",
  permssion: 0,
  credits: "Islamick Cyber Chat",
