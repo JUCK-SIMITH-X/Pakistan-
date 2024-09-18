@@ -1,45 +1,60 @@
-const axios = require("axios");
-const baseApiUrl = async () => {
-  const base = await axios.get(
-    `https://raw.githubusercontent.com/Blankid018/D1PT0/main/baseApiUrl.json`,
-  );
-  return base.data.api;
+const axios = require('axios');
+
+const config = {
+  name: "imgur",
+  aliases: ["upload", "image"],
+  version: "1.0.0",
+  author: "Starboy Mostakim",
+  role: 0,
+  category: "Image Processing",
+  shortDescription: {
+    en: "Upload images to Imgur",
+    vi: "Tải lên hình ảnh lên Imgur"
+  },
+  longDescription: {
+    en: "This command allows users to upload images to Imgur.",
+    vi: "Lệnh này cho phép người dùng tải lên hình ảnh lên Imgur."
+  },
+  guide: {
+    en: "Simply provide the image link to upload it to Imgur.",
+    vi: "Chỉ cần cung cấp liên kết hình ảnh để tải lên Imgur."
+  }
 };
 
-(module.exports.config = {
-  name: "imgur",
-  version: "6.9",
-  credits: "dipto",
-  countDown: 5,
-  hasPermssion: 0,
-  usePrefix: true,
-  prefix:true,
-  commandCategory: "media",
-  category: " media",
-  description: "convert image/video into Imgur link",
-  usages: "reply [image, video]",
-}),
-  (module.exports.run = async function ({ api, event }) {
-    const dip = event.messageReply?.attachments[0]?.url;
-    if (!dip) {
-      return api.sendMessage(
-        "Please reply to an image or video.",
-        event.threadID,
-        event.messageID,
-      );
-    }
+// Function to handle command execution
+async function onStart({ args, message, event, api, commandName }) {
+  const imageUrl = args[0];
+
+  if (imageUrl) {
+    // Imgur Client ID (you need to replace this with your own)
+    const clientId = 'your_imgur_client_id';
+
     try {
-      const res = await axios.get(
-        `${await baseApiUrl()}/imgur?url=${encodeURIComponent(dip)}`,
-      );
-      const dipto = res.data.data;
-      api.sendMessage(dipto, event.threadID, event.messageID);
+      message.reply("Processing the image link...");
+
+      // Making a request to Imgur API to upload the image
+      const response = await axios.post('https://api.imgur.com/3/image', {
+        image: imageUrl,
+        type: 'url'
+      }, {
+        headers: {
+          Authorization: `Client-ID ${clientId}`
+        }
+      });
+
+      if (response.data.success) {
+        message.reply(`Image uploaded successfully! View it here: ${response.data.data.link}`);
+      } else {
+        message.reply("Failed to upload image to Imgur.");
+      }
     } catch (error) {
-      console.error(error);
-      return api.sendMessage(
-        "Failed to convert image or video into link.",
-        event.threadID,
-        event.messageID,
-      );
+      console.error("Error uploading image to Imgur:", error);
+      message.reply("An error occurred while uploading the image. Please try again.");
     }
-  });
+  } else {
+    message.reply("Please provide a valid image link to upload.");
+  }
+}
+
+// Export module
+module.exports = { config, onStart };
