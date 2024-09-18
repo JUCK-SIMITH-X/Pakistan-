@@ -1,34 +1,3 @@
-const axios = require("axios");
-const baseApiUrl = async () => {
-  const base = await axios.get(
-    `https://raw.githubusercontent.com/Blankid018/D1PT0/main/baseApiUrl.json`,
-  );
-  return base.data.api;
-};
-
-const languagesMap = {
-  ar: "arabic",
-  bn: "bangla",
-  en: "english",
-  hi: "hindi",
-  id: "indonesian",
-  ne: "nepali",
-  tl: "tagalog",
-  te: "telugu",
-  ur: "urdu",
-  vi: "vietnamese"
-};
-
-// Default language set Bangla
-const shortLang = "bn"; 
-
-// You can change this language to your preferred language code
-// Example:
-// const shortLang = "hi"; // For Hindi
-// const shortLang = "en"; // For English
-
-const lang = languagesMap[shortLang] || "bangla";
-
 module.exports.config = {
   name: "bby",
   version: "1.0.0",
