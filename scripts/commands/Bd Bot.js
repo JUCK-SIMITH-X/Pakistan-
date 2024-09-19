@@ -1,6 +1,6 @@
 module.exports.config = {
 
-name: "bot",
+name: "o go",
 
 version: "1.0.0",
 
