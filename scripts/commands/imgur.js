@@ -1,16 +1,15 @@
-const axios = require('axios');
-
-const config = {
+module.exports.config = {
   name: "imgur",
-  aliases: ["upload", "image"],
-  version: "1.0.0",
-  author: "Starboy Mostakim",
-  role: 0,
-  category: "Image Processing",
-  shortDescription: {
-    en: "Upload images to Imgur",
-    vi: "Tải lên hình ảnh lên Imgur"
-  },
+  version: "1.0.0", 
+  permssion: 0,
+  prefix: true,
+  credits: "Islamick Cyber Chat",
+  description: "create your video link",
+  category: "other", 
+  usages: "[tag]", 
+  cooldowns: 0,
+};
+
   longDescription: {
     en: "This command allows users to upload images to Imgur.",
     vi: "Lệnh này cho phép người dùng tải lên hình ảnh lên Imgur."
