@@ -1,6 +1,6 @@
 module.exports.config = {
 
-name: "o go",
+name: "koliza",
 
 version: "1.0.0",
 
