@@ -2,7 +2,7 @@ const fs = require("fs");
 
 module.exports = {
   config: {
-    name: "f11",
+    name: "By",
     version: "1.0.1",
     prefix: false,
     permission: 0, // Fixed typo in "permission"
