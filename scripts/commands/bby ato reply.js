@@ -1,7 +1,7 @@
 const axios = require("axios");
 const baseApiUrl = async () => {
   const base = await axios.get(
-    `https://raw.githubusercontent.com/Blankid018/D1PT0/main/baseApiUrl.json`,
+`https://raw.githubusercontent.com/Blankid018/D1PT0/main/baseApiUrl.json`,
   );
   return base.data.api;
 };
@@ -16,34 +16,37 @@ const languagesMap = {
   tl: "tagalog",
   te: "telugu",
   ur: "urdu",
-  vi: "vietnamese"
+  vi: "vietnamese" 
 };
 
 // Default language set Bangla
-const shortLang = "bn"; 
+const shortLang = "en"; 
 
 // You can change this language to your preferred language code
 // Example:
 // const shortLang = "hi"; // For Hindi
 // const shortLang = "en"; // For English
 
-const lang = languagesMap[shortLang] || "bangla";
+const lang = languagesMap[shortLang];
 
 module.exports.config = {
   name: "bby",
   version: "1.0.0",
-  role: 0,
-  author: "dipto",
-  description: "better then all Sim simi with multiple conversation",
-  guide: { en: "[message]" },
+  hasPermssion: 0,
+  credits: "dipto",
+  description: "better than all Sim simi",
+  usePrefix: true,
+  prefix:true,
   category: "ChatBots",
-  coolDowns: 5,
+  commandCategory: "ChatBots",
+  cooldowns: 5,
 };
-module.exports.onReply = async function ({ api, event }) {
+
+module.exports.handleReply = async function ({ api, event, handleReply }) {
   if (event.type == "message_reply") {
     const reply = event.body.toLowerCase();
     if (isNaN(reply)) {
-      /*const response = await axios.get(
+   /* const response = await axios.get(
         `${await baseApiUrl()}/baby?text=${encodeURIComponent(reply)}&language=${lang}`,
       );*/
       const response = await axios.get(
@@ -54,8 +57,8 @@ module.exports.onReply = async function ({ api, event }) {
         ok,
         event.threadID,
         (error, info) => {
-          global.GoatBot.onReply.set(info.messageID, {
-            commandName: this.config.name,
+          global.client.handleReply.push({
+            name: this.config.name,
             type: "reply",
             messageID: info.messageID,
             author: event.senderID,
@@ -67,31 +70,27 @@ module.exports.onReply = async function ({ api, event }) {
     }
   }
 };
-module.exports.onStart = async function ({ api, args, event }) {
+module.exports.run = async function ({ api, args, event }) {
   try {
     const dipto = args.join(" ").toLowerCase();
     if (!args[0]) {
       api.sendMessage(
-        "Please provide a question to answer\n\nExample:\nbaby ki koro",
+        "Please provide a question to answer\n\nExample:\nbby ki koro",
         event.threadID,
         event.messageID,
       );
       return;
     }
     if (dipto) {
-    /*const response = await axios.get(
-        `${await baseApiUrl()}/baby?text=${dipto}&language=${lang}`,
-      );*/
-      const response = await axios.get(
-        `${await baseApiUrl()}/baby?text=${dipto}`,
-      );
+      /* const response = await axios.get(`${await baseApiUrl()}/baby?text=${dipto}&language=${lang}`);*/
+      const response = await axios.get(`${await baseApiUrl()}/baby?text=${dipto}`);
       const mg = response.data.reply;
       await api.sendMessage(
         { body: mg },
         event.threadID,
         (error, info) => {
-          global.GoatBot.onReply.set(info.messageID, {
-            commandName: this.config.name,
+          global.client.handleReply.push({
+            name: this.config.name,
             type: "reply",
             messageID: info.messageID,
             author: event.senderID,
