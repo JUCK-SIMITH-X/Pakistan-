@@ -20,7 +20,7 @@ event.body.indexOf("🤫")==0 ||
 event.body.indexOf("চুপ")==0 || event.body.indexOf("chup")==0 || event.body.indexOf("Chup")==0) {
 		var msg = {
 				body: "╭──────•◈•───────╮ \n-ওই চুপ বেশি বুঝো 🫵তুমি-🤫😒\n╰──────•◈•───────╯",
-				attachment: fs.createReadStream(__dirname + `/S.M.Hridoy/chup.mp4`)
+				attachment: fs.createReadStream(__dirname + `/S.M.Hridoy/chup.mp3`)
 			}
 			api.sendMessage( msg, threadID, messageID);
     api.setMessageReaction("🤫", event.messageID, (err) => {}, true)
